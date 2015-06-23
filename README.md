@@ -32,7 +32,7 @@ Here is an example straight from the tests:
 			Assert.IsNotNull(dbContext.People);
 		}
 	}
-    
+
 In the above example I create a mock of my DbContext-deriving class. As a result, all fields that are of type `DbSet<T>` or `IDbSet<T>` are automatically populated with a mock in-memory DbSet (initially empty).
 
 We can also create a mock from a DbContext-like interface, like in the example below:
@@ -48,7 +48,7 @@ We can also create a mock from a DbContext-like interface, like in the example b
 		var dbContext = EntityFrameworkMock.Create<IMyDbContext>();
 		Assert.IsNotNull(dbContext.People);
 	}
-    
+
 Populating data
 ===============
 Populating the context with data lets you simulate a database that has data in it. Here's how we can populate our context:
@@ -76,3 +76,8 @@ Changes made to the DbSet are passed to the backing collection and vice versa.
 Further reading
 ===============
 Check out the unit tests in Telerik.JustMock.EntityFramework.Tests - they double as example usage.
+
+
+Packing the nuget
+===============
+Run the pack-nuget.cmd in the soultion folder.
